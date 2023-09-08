@@ -300,15 +300,15 @@ def main():
         job_submit_runner.monitor(job_run_info['run_id'])
     except Exception as e:
         print(e)
-    finally:
-        pipeline_service.delete(bronze_pipeline_id)
-        pipeline_service.delete(silver_pipeline_id)
-        dbfs_service.delete(dbfs_tmp_path, True)
-        workspace_service.delete(runners_nb_path, True)
-        try:
-            os.remove("conf/onboarding.json")
-        except Exception as e:
-            print(e)
+#    finally:
+#        pipeline_service.delete(bronze_pipeline_id)
+#        pipeline_service.delete(silver_pipeline_id)
+#        dbfs_service.delete(dbfs_tmp_path, True)
+#        workspace_service.delete(runners_nb_path, True)
+#        try:
+#            os.remove("conf/onboarding.json")
+#        except Exception as e:
+#            print(e)
 
 
 def process_arguments():
